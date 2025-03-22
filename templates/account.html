@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Account - FreshMart Groceries</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>FreshMart</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/products">Products</a></li>
+                <li id="auth-link"><a href="/account" class="active">Account</a></li>
+                <li><a href="/cart"><i class="fas fa-shopping-cart"></i> Cart <span id="cart-count">0</span></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="page-title">
+        <h2>My Account</h2>
+    </div>
+
+    <section class="account-container">
+        <div class="account-sidebar">
+            <ul>
+                <li class="active" data-tab="profile">Profile</li>
+                <li data-tab="orders">Order History</li>
+                <li data-tab="addresses">Addresses</li>
+                <li id="logout-btn">Logout</li>
+            </ul>
+        </div>
+        <div class="account-content">
+            <div id="profile" class="account-tab active">
+                <h3>Profile Information</h3>
+                <form id="profile-form">
+                    <div class="form-group">
+                        <label for="profile-name">Full Name</label>
+                        <input type="text" id="profile-name" name="name" value="John Doe" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="profile-email">Email</label>
+                        <input type="email" id="profile-email" name="email" value="john.doe@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="profile-phone">Phone</label>
+                        <input type="tel" id="profile-phone" name="phone" value="(123) 456-7890">
+                    </div>
+                    <button type="submit" class="btn">Update Profile</button>
+                </form>
+            </div>
+            <div id="orders" class="account-tab">
+                <h3>Order History</h3>
+                <div class="order-list" id="order-list">
+                    <!-- Orders will be loaded here via JavaScript -->
+                    <div class="empty-message">You haven't placed any orders yet.</div>
+                </div>
+            </div>
+            <div id="addresses" class="account-tab">
+                <h3>Saved Addresses</h3>
+                <div class="address-list" id="address-list">
+                    <!-- Addresses will be loaded here via JavaScript -->
+                    <div class="empty-message">You haven't saved any addresses yet.</div>
+                </div>
+                <button id="add-address-btn" class="btn">Add New Address</button>
+                <form id="address-form" class="hidden">
+                    <div class="form-group">
+                        <label for="address-name">Address Name</label>
+                        <input type="text" id="address-name" name="name" placeholder="Home, Work, etc." required>
+                    </div>
+                    <div class="form-group">
+                        <label for="address-line">Street Address</label>
+                        <input type="text" id="address-line" name="address" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="address-city">City</label>
+                        <input type="text" id="address-city" name="city" required>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group half">
+                            <label for="address-state">State</label>
+                            <input type="text" id="address-state" name="state" required>
+                        </div>
+                        <div class="form-group half">
+                            <label for="address-zip">ZIP Code</label>
+                            <input type="text" id="address-zip" name="zip" required>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn">Save Address</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>FreshMart</h3>
+                <p>Quality groceries delivered to your doorstep.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/products">Products</a></li>
+                    <li><a href="/account">Account</a></li>
+                    <li><a href="/cart">Cart</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: info@freshmart.com</p>
+                <p>Phone: (123) 456-7890</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 FreshMart. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
