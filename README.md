@@ -13,13 +13,14 @@ This web application allows users to upload an image. The backend then analyzes 
 - **Image Analysis:** OpenCV (or specify your library)
 
 ## 📁 Project Structure
-
+'''
 Pse_Website/
-├── static/ # Static files (CSS, JS, Images)
-├── templates/ # HTML templates
-│ └── index.html # Main user interface
-├── app.py # Flask backend with detection logic
-└── README.md # Project documentation
+├── static/        # Static files (CSS, JS, Images)
+├── templates/     # HTML templates
+│ └── index.html   # Main user interface
+├── app.py         # Flask backend with detection logic
+└── README.md      # Project documentation
+'''
 
 
 ## 🚀 Features
