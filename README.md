@@ -44,10 +44,6 @@ Pse_Website/
 - Ensured detection output was properly shown to the user  
 - Worked collaboratively with teammates who focused on UI layout
 
-## 📷 Screenshots (Optional)
-
-*Add before/after images or detection results here if available.*
-
 ## 🔧 Future Improvements
 
 - Complete the upload pipeline to the store page  
